@@ -1,0 +1,26 @@
+s:1343:"<p>This beginner-friendly course introduces you to the fundamentals of embedded systems and their programming. Whether you're an electronics enthusiast, engineering student, or a developer stepping into the embedded domain, this course lays a solid foundation in understanding microcontrollers, real-time programming, and hardware-software interaction.</p>
+<p>You will learn how embedded systems work, how to write efficient C code for microcontrollers, and how to interface sensors, actuators, and communication protocols. Through hands-on exercises, you’ll gain practical experience with tools like the Arduino or ESP32 platforms and understand real-world applications in automation, IoT, and consumer electronics.</p>
+<hr />
+<p><strong>What You’ll Learn:</strong></p>
+<ul>
+<li>
+<p>Core concepts of embedded systems and architecture</p>
+</li>
+<li>
+<p>C programming essentials for microcontrollers</p>
+</li>
+<li>
+<p>GPIO, timers, interrupts, and memory management</p>
+</li>
+<li>
+<p>Basics of real-time systems and task scheduling</p>
+</li>
+<li>
+<p>Sensor interfacing and peripheral communication (UART, I2C, SPI)</p>
+</li>
+<li>
+<p>Debugging and testing techniques</p>
+</li>
+</ul>
+<hr />
+<p><strong>Prerequisites:</strong><br />Basic knowledge of C programming and electronics is recommended but not mandatory.</p>";
