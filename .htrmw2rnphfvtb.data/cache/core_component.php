@@ -312,6 +312,7 @@ $cache = array (
       'navigation' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/blocks/navigation',
       'news_items' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/blocks/news_items',
       'online_users' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/blocks/online_users',
+      'openai_chat' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/blocks/openai_chat',
       'private_files' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/blocks/private_files',
       'recent_activity' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/blocks/recent_activity',
       'recentlyaccessedcourses' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/blocks/recentlyaccessedcourses',
@@ -603,6 +604,7 @@ $cache = array (
     array (
       'boost' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/theme/boost',
       'classic' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/theme/classic',
+      'vxg_boost' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/theme/vxg_boost',
     ),
     'local' => 
     array (
@@ -1672,6 +1674,14 @@ $cache = array (
     'block_online_users\\fetcher' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/blocks/online_users/classes/fetcher.php',
     'block_online_users\\privacy\\provider' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/blocks/online_users/classes/privacy/provider.php',
     'block_online_users_fetcher' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/blocks/online_users/classes/fetcher.php',
+    'block_openai_chat\\completion' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/blocks/openai_chat/classes/completion.php',
+    'block_openai_chat\\completion\\assistant' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/blocks/openai_chat/classes/completion/assistant.php',
+    'block_openai_chat\\completion\\azure' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/blocks/openai_chat/classes/completion/azure.php',
+    'block_openai_chat\\completion\\chat' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/blocks/openai_chat/classes/completion/chat.php',
+    'block_openai_chat\\privacy\\provider' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/blocks/openai_chat/classes/privacy/provider.php',
+    'block_openai_chat\\report' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/blocks/openai_chat/classes/report.php',
+    'block_openai_chat_completion' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/blocks/openai_chat/classes/completion.php',
+    'block_openai_chat_report' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/blocks/openai_chat/classes/report.php',
     'block_private_files\\privacy\\provider' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/blocks/private_files/classes/privacy/provider.php',
     'block_recent_activity\\observer' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/blocks/recent_activity/classes/observer.php',
     'block_recent_activity\\privacy\\provider' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/blocks/recent_activity/classes/privacy/provider.php',
@@ -7237,6 +7247,7 @@ $cache = array (
         'html' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/blocks/html/lib.php',
         'myoverview' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/blocks/myoverview/lib.php',
         'online_users' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/blocks/online_users/lib.php',
+        'openai_chat' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/blocks/openai_chat/lib.php',
         'recentlyaccesseditems' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/blocks/recentlyaccesseditems/lib.php',
         'timeline' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/blocks/timeline/lib.php',
       ),
@@ -7413,6 +7424,7 @@ $cache = array (
       array (
         'boost' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/theme/boost/lib.php',
         'classic' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/theme/classic/lib.php',
+        'vxg_boost' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/theme/vxg_boost/lib.php',
       ),
       'local' => 
       array (
@@ -7591,6 +7603,7 @@ $cache = array (
         'html' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/blocks/html/settings.php',
         'myoverview' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/blocks/myoverview/settings.php',
         'online_users' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/blocks/online_users/settings.php',
+        'openai_chat' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/blocks/openai_chat/settings.php',
         'recentlyaccessedcourses' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/blocks/recentlyaccessedcourses/settings.php',
         'rss_client' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/blocks/rss_client/settings.php',
         'section_links' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/blocks/section_links/settings.php',
@@ -7764,6 +7777,7 @@ $cache = array (
       array (
         'boost' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/theme/boost/settings.php',
         'classic' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/theme/classic/settings.php',
+        'vxg_boost' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/theme/vxg_boost/settings.php',
       ),
       'local' => 
       array (

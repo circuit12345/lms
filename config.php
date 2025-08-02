@@ -23,6 +23,7 @@ $CFG->dataroot  = '/home/u876035774/domains/lms.circuitmakers.in/public_html/.ht
 $CFG->admin     = 'admin';
 
 $CFG->directorypermissions = 0777;
+$CFG->theme = 'boost';
 
 require_once(__DIR__ . '/lib/setup.php');
 
