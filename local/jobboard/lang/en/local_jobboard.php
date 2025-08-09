@@ -1,0 +1,25 @@
+<?php
+$string['pluginname'] = 'Job Board';
+$string['pagename'] = 'CML Job Portal';
+$string['jobtitle'] = 'Job Title';
+$string['description'] = 'Description';
+$string['skills'] = 'Skills';
+$string['location'] = 'Location';
+$string['salary'] = 'Salary';
+$string['postedby'] = 'Posted by';
+$string['dateposted'] = 'Date posted';
+$string['expirydate'] = 'Expiry date';
+$string['apply'] = 'Apply';
+$string['applynow'] = 'Apply Now';
+$string['uploadresume'] = 'Upload Resume';
+$string['submitapplication'] = 'Submit Application';
+$string['myapplications'] = 'My Applications';
+$string['applications'] = 'Applications';
+$string['status_pending'] = 'Pending';
+$string['status_selected'] = 'Selected';
+$string['status_rejected'] = 'Rejected';
+$string['postjob'] = 'Post Job';
+$string['viewapplicants'] = 'View Applicants';
+$string['jobboard'] = 'Job Board';
+$string['status_selected'] = 'Selected';
+$string['status_rejected'] = 'Rejected';

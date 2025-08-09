@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="local/jobboard/db" VERSION="2025080803" COMMENT="Job Board Plugin DB">
+  <TABLES>
+
+    <TABLE NAME="jobboard_jobs" COMMENT="Job postings">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" />
+        <FIELD NAME="title" TYPE="char" LENGTH="255" NOTNULL="true" />
+        <FIELD NAME="description" TYPE="text" NOTNULL="false" />
+        <FIELD NAME="skills" TYPE="text" NOTNULL="false" />
+        <FIELD NAME="location" TYPE="char" LENGTH="255" NOTNULL="false" />
+        <FIELD NAME="salary" TYPE="char" LENGTH="100" NOTNULL="false" />
+        <FIELD NAME="postedby" TYPE="int" LENGTH="10" NOTNULL="true" />
+        <FIELD NAME="dateposted" TYPE="int" LENGTH="10" NOTNULL="true" />
+        <FIELD NAME="expirydate" TYPE="int" LENGTH="10" NOTNULL="false" />
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+    </TABLE>
+
+    <TABLE NAME="jobboard_resumes" COMMENT="User uploaded resumes">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" />
+        <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" />
+        <FIELD NAME="fileitemid" TYPE="int" LENGTH="10" NOTNULL="true" />
+        <FIELD NAME="filename" TYPE="char" LENGTH="255" NOTNULL="true" />
+        <FIELD NAME="uploadedon" TYPE="int" LENGTH="10" NOTNULL="true" />
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+    </TABLE>
+
+    <TABLE NAME="jobboard_applications" COMMENT="Applications">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" />
+        <FIELD NAME="jobid" TYPE="int" LENGTH="10" NOTNULL="true" />
+        <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" />
+        <FIELD NAME="resumeid" TYPE="int" LENGTH="10" NOTNULL="true" />
+        <FIELD NAME="status" TYPE="char" LENGTH="20" NOTNULL="true" DEFAULT="Pending" />
+        <FIELD NAME="dateapplied" TYPE="int" LENGTH="10" NOTNULL="true" />
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+    </TABLE>
+
+  </TABLES>
+</XMLDB>

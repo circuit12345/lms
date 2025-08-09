@@ -1,5 +1,20 @@
 // variables
 // --------------------------
+// Premium color palette overrides
+
+$primary: #5A67D8 !default;        // Indigo blue
+$secondary: #ED64A6 !default;      // Pink accent
+$success: #48BB78 !default;        // Green success
+$warning: #ED8936 !default;        // Orange warning
+$danger: #F56565 !default;         // Red danger
+$info: #3B82F6 !default;           // Blue info
+
+$body-bg: #F7FAFC !default;        // Light background
+$body-color: #2D3748 !default;     // Dark text
+$link-color: $primary !default;
+$link-hover-color: darken($primary, 15%) !default;
+$state-success-bg: shift-color($success, -80%) !default;
+$state-success-border: shift-color($success, -70%) !default;
 
 $fa-css-prefix            : fa !default;
 $fa-style                 : 900 !default;
@@ -5042,3 +5057,26 @@ $fa-brand-icons: (
   "pix": $fa-var-pix,
   "steam-symbol": $fa-var-steam-symbol,
 );
+// Button style improvements
+.btn-primary {
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba($primary, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: darken($primary, 10%);
+  box-shadow: 0 6px 20px rgba(darken($primary, 10%), 0.4);
+  transform: translateY(-3px);
+}
+
+// Card hover shadows
+.card, .block {
+  border-radius: 12px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover, .block:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  transform: translateY(-4px);
+}

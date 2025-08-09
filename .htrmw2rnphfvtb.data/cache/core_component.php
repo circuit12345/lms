@@ -241,6 +241,7 @@ $cache = array (
       'nologin' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/nologin',
       'none' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/none',
       'oauth2' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oauth2',
+      'oidc' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc',
       'shibboleth' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/shibboleth',
       'webservice' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/webservice',
     ),
@@ -605,10 +606,10 @@ $cache = array (
     array (
       'boost' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/theme/boost',
       'classic' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/theme/classic',
-      'vxg_boost' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/theme/vxg_boost',
     ),
     'local' => 
     array (
+      'jobboard' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/local/jobboard',
     ),
     'h5plib' => 
     array (
@@ -1628,6 +1629,48 @@ $cache = array (
     'auth_oauth2_api' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oauth2/classes/api.php',
     'auth_oauth2_auth' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oauth2/classes/auth.php',
     'auth_oauth2_linked_login' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oauth2/classes/linked_login.php',
+    'auth_oidc\\adminsetting\\auth_oidc_admin_setting_iconselect' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/adminsetting/auth_oidc_admin_setting_iconselect.php',
+    'auth_oidc\\adminsetting\\auth_oidc_admin_setting_label' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/adminsetting/auth_oidc_admin_setting_label.php',
+    'auth_oidc\\adminsetting\\auth_oidc_admin_setting_loginflow' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/adminsetting/auth_oidc_admin_setting_loginflow.php',
+    'auth_oidc\\adminsetting\\auth_oidc_admin_setting_redirecturi' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/adminsetting/auth_oidc_admin_setting_redirecturi.php',
+    'auth_oidc\\event\\action_failed' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/event/action_failed.php',
+    'auth_oidc\\event\\user_authed' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/event/user_authed.php',
+    'auth_oidc\\event\\user_connected' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/event/user_connected.php',
+    'auth_oidc\\event\\user_created' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/event/user_created.php',
+    'auth_oidc\\event\\user_disconnected' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/event/user_disconnected.php',
+    'auth_oidc\\event\\user_loggedin' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/event/user_loggedin.php',
+    'auth_oidc\\event\\user_rename_attempt' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/event/user_rename_attempt.php',
+    'auth_oidc\\form\\application' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/form/application.php',
+    'auth_oidc\\form\\binding_username_claim' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/form/binding_username_claim.php',
+    'auth_oidc\\form\\change_binding_username_claim_tool_form1' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/form/change_binding_username_claim_tool_form1.php',
+    'auth_oidc\\form\\change_binding_username_claim_tool_form2' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/form/change_binding_username_claim_tool_form2.php',
+    'auth_oidc\\form\\disconnect' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/form/disconnect.php',
+    'auth_oidc\\httpclient' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/httpclient.php',
+    'auth_oidc\\httpclientinterface' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/httpclientinterface.php',
+    'auth_oidc\\jwt' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/jwt.php',
+    'auth_oidc\\loginflow\\authcode' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/loginflow/authcode.php',
+    'auth_oidc\\loginflow\\base' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/loginflow/base.php',
+    'auth_oidc\\loginflow\\rocreds' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/loginflow/rocreds.php',
+    'auth_oidc\\observers' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/observers.php',
+    'auth_oidc\\oidcclient' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/oidcclient.php',
+    'auth_oidc\\preview' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/preview.php',
+    'auth_oidc\\privacy\\provider' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/privacy/provider.php',
+    'auth_oidc\\process' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/process.php',
+    'auth_oidc\\task\\cleanup_oidc_sid' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/task/cleanup_oidc_sid.php',
+    'auth_oidc\\task\\cleanup_oidc_state_and_token' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/task/cleanup_oidc_state_and_token.php',
+    'auth_oidc\\tests\\mockhttpclient' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/tests/mockhttpclient.php',
+    'auth_oidc\\tests\\mockoidcclient' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/tests/mockoidcclient.php',
+    'auth_oidc\\upload_process_tracker' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/upload_process_tracker.php',
+    'auth_oidc\\utils' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/utils.php',
+    'auth_oidc_httpclient' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/httpclient.php',
+    'auth_oidc_httpclientinterface' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/httpclientinterface.php',
+    'auth_oidc_jwt' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/jwt.php',
+    'auth_oidc_observers' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/observers.php',
+    'auth_oidc_oidcclient' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/oidcclient.php',
+    'auth_oidc_preview' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/preview.php',
+    'auth_oidc_process' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/process.php',
+    'auth_oidc_upload_process_tracker' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/upload_process_tracker.php',
+    'auth_oidc_utils' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/classes/utils.php',
     'auth_shibboleth\\admin_setting_special_convert_data_configfile' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/shibboleth/classes/admin_setting_special_convert_data_configfile.php',
     'auth_shibboleth\\admin_setting_special_idp_configtextarea' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/shibboleth/classes/admin_setting_special_idp_configtextarea.php',
     'auth_shibboleth\\admin_setting_special_wayf_select' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/shibboleth/classes/admin_setting_special_wayf_select.php',
@@ -7246,6 +7289,7 @@ $cache = array (
         'lti' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/lti/lib.php',
         'none' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/none/lib.php',
         'oauth2' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oauth2/lib.php',
+        'oidc' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/lib.php',
         'shibboleth' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/shibboleth/lib.php',
       ),
       'calendartype' => 
@@ -7464,10 +7508,10 @@ $cache = array (
       array (
         'boost' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/theme/boost/lib.php',
         'classic' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/theme/classic/lib.php',
-        'vxg_boost' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/theme/vxg_boost/lib.php',
       ),
       'local' => 
       array (
+        'jobboard' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/local/jobboard/lib.php',
       ),
       'h5plib' => 
       array (
@@ -7604,6 +7648,7 @@ $cache = array (
         'manual' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/manual/settings.php',
         'none' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/none/settings.php',
         'oauth2' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oauth2/settings.php',
+        'oidc' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/oidc/settings.php',
         'shibboleth' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/auth/shibboleth/settings.php',
       ),
       'calendartype' => 
@@ -7818,10 +7863,10 @@ $cache = array (
       array (
         'boost' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/theme/boost/settings.php',
         'classic' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/theme/classic/settings.php',
-        'vxg_boost' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/theme/vxg_boost/settings.php',
       ),
       'local' => 
       array (
+        'jobboard' => '/home/u876035774/domains/lms.circuitmakers.in/public_html/local/jobboard/settings.php',
       ),
       'h5plib' => 
       array (

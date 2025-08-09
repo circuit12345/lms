@@ -37,6 +37,23 @@ function theme_boost_css_tree_post_processor($tree, $theme) {
     $prefixer->prefix();
 }
 
+function theme_boost_extend_navigation(global_navigation $navigation) {
+    // Create a URL for your Job Board index page.
+    $url = new moodle_url('/local/jobboard/index.php');
+
+    // Add it right after Dashboard.
+    $node = navigation_node::create(
+        get_string('jobboard', 'local_jobboard'), // Language string
+        $url,
+        navigation_node::TYPE_CUSTOM,
+        null,
+        'jobboard',
+        new pix_icon('i/site', '') // Use a Moodle icon
+    );
+
+    // Insert under the main navigation root.
+    $navigation->add_node($node, 'myhome');
+}
 /**
  * Inject additional SCSS.
  *
