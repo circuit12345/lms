@@ -158,12 +158,13 @@
                     {{{recaptcha}}}
                 </div>
             {{/recaptcha}}
-            <div class="login-form-submit mb-3">
-                <button class="btn btn-primary btn-lg" type="submit" id="loginbtn">{{#str}}login{{/str}}</button>
-            </div>
-            <div class="login-form-forgotpassword mb-3">
+             <div class="login-form-forgotpassword mb-3">
                 <a href="{{forgotpasswordurl}}">{{#str}}forgotaccount{{/str}}</a>
             </div>
+            <div class="login-form-submit mb-3">
+                <button class="btn btn-primary btn-lg  w-full" type="submit"  style="width: 100% !important;" id="loginbtn">{{#str}}login{{/str}}</button>
+            </div>
+
         </form>
     {{/showloginform}}
     {{#hasidentityproviders}}
@@ -190,18 +191,18 @@
     {{#cansignup}}
         <div class="login-signup">
             <a class="btn btn-secondary" href="{{signupurl}}">{{#str}}startsignup{{/str}}</a>
-        </div>
+        </div><br>
     {{/cansignup}}
     {{#canloginasguest}}
         <div class="login-divider"></div>
-        <h2 class="login-heading">{{#str}}someallowguest{{/str}}</h2>
+        <h2 class="login-heading">{{#str}}someallowguest{{/str}}</h2><br>
         <form action="{{loginurl}}" method="post" id="guestlogin">
             <input type="hidden" name="logintoken" value="{{logintoken}}">
             <input type="hidden" name="username" value="guest" />
             <input type="hidden" name="password" value="guest" />
             <button class="btn btn-secondary" type="submit" id="loginguestbtn">{{#str}}loginguest{{/str}}</button>
         </form>
-    {{/canloginasguest}}
+    {{/canloginasguest}}<br>
     <div class="login-divider"></div>
     <div class="d-flex">
         {{#languagemenu}}
