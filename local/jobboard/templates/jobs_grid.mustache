@@ -1,0 +1,8 @@
+<div class="jobboard-grid">
+  {{#jobs}}
+    {{> local_jobboard/job_card }}
+  {{/jobs}}
+  {{^jobs}}
+    <div class="alert alert-info">{{#str}} nojobs, local_jobboard {{/str}}</div>
+  {{/jobs}}
+</div>

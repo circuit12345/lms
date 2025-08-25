@@ -1,0 +1,113 @@
+<style>
+.job-view {
+    max-width: 720px;
+    margin: 2rem auto;
+    background: #fff;
+    border-radius: 14px;
+    padding: 2.5rem 3rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #2c3e50;
+}
+.job-view__header h2 {
+    font-weight: 700;
+    font-size: 2.3rem;
+    margin-bottom: 0.5rem;
+    color: #1a202c;
+}
+.job-view__chips {
+    margin-bottom: 1rem;
+}
+.chip {
+    display: inline-block;
+    padding: 0.25rem 0.8rem;
+    font-size: 0.87rem;
+    border-radius: 32px;
+    font-weight: 600;
+    margin-right: 8px;
+    color: white;
+    user-select: none;
+}
+.chip--tag {
+    background: linear-gradient(90deg, #38b2ac, #4299e1);
+}
+.chip--status {
+    background: linear-gradient(90deg, #3182ce, #2c5282);
+}
+.job-view__meta {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #718096;
+}
+.job-view__summary,
+.job-view__description {
+    margin-bottom: 2rem;
+}
+.job-view__summary h3,
+.job-view__description h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+    color: #2d3748;
+}
+.job-view__summary .content,
+.job-view__description .content {
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #4a5568;
+}
+.job-view__apply {
+    text-align: center;
+    margin-top: 3rem;
+}
+.job-view__apply .btn {
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border: none;
+    color: white;
+    font-size: 1.15rem;
+    padding: 0.85rem 2.5rem;
+    border-radius: 38px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+.job-view__apply .btn:hover {
+    background: linear-gradient(90deg, #764ba2, #667eea);
+    box-shadow: 0 8px 15px rgba(118, 75, 162, 0.6);
+    color: #edf2f7;
+}
+</style>
+
+<div class="job-view">
+  <header class="job-view__header">
+    <h2>{{title}}</h2>
+    <div class="job-view__chips">
+      {{#tags}}<span class="chip chip--tag">{{.}}</span>{{/tags}}
+      <span class="chip chip--status">{{status_label}}</span>
+    </div>
+    <div class="job-view__meta">
+      {{location}} {{#jobtype}}· {{jobtype}}{{/jobtype}} {{#salaryrange}}· {{salaryrange}}{{/salaryrange}} {{#deadline}}· {{deadline}}{{/deadline}}
+    </div>
+  </header>
+
+  {{#summary}}
+    <section class="job-view__summary">
+      <h3>{{#str}}summary, moodle{{/str}}</h3>
+      <div class="content">{{{summary}}}</div>
+    </section>
+  {{/summary}}
+
+  <section class="job-view__description">
+    <h3>{{#str}}description, local_jobboard{{/str}}</h3>
+    <div class="content">{{{description}}}</div>
+  </section>
+
+  {{#canapply}}
+  <section id="apply" class="job-view__apply">
+    <a class="btn btn-primary" href="{{apply_url}}" role="button">{{#str}}apply, local_jobboard{{/str}}</a>
+  </section>
+  {{/canapply}}
+</div>

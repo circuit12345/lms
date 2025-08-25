@@ -1,0 +1,195 @@
+{{> theme_boost/head }}
+
+<style>
+/* Fade-in & slide-up animation on load */
+@keyframes fadeSlideUp {
+  0% {opacity: 0; transform: translateY(30px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
+/* Gradient background animation */
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+body {
+  background: linear-gradient(-45deg, #E6FFF5, #F8FFFE, #E0F7FA, #CAF7E3);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+/* Vision container pop effect */
+.vision_container div {
+  animation: fadeSlideUp 1.2s ease-out forwards;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+.vision_container div:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* Login Cards animation */
+.login-card {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlideUp 1s ease forwards;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.login-card:nth-child(1) { animation-delay: 0.3s; }
+.login-card:nth-child(2) { animation-delay: 0.6s; }
+.login-card:nth-child(3) { animation-delay: 0.9s; }
+
+.login-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 18px rgba(0,0,0,0.12);
+}
+
+/* Button hover effect */
+button {
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+button:hover {
+  background: #f1f1f1;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+</style>
+
+
+<body {{{ bodyattributes }}}>
+    {{> core/local/toast/wrapper }}
+    <div id="page-wrapper">
+        {{{ output.standard_top_of_body_html }}}
+
+        <!-- Heading Section -->
+        <div style="text-align: center; padding: 30px; background:transparent;">
+            <h1 style="background:linear-gradient(to right,#1F4C8C,#00cc99);
+                       -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+                       font-size: 36px; font-weight: bold;
+                       margin-bottom: 15px; animation: fadeSlideUp 1s;">
+                Circuit Makers Laboratory
+            </h1>
+            <p style="font-size:16px; color:#333; margin:0; animation: fadeSlideUp 1.2s;">
+                A gamified renewable energy learning ecosystem powered by AI, <br>
+                designed to inspire the next generation of sustainable technology leaders.
+            </p>
+        </div>
+
+        <!-- Split Layout -->
+        <div style="display:grid; grid-template-columns:1.2fr 1fr; min-height:130vh;">
+
+            <!-- Left Side (Vision Box) -->
+            <div class="vision_container">
+                <div style="background-color:#50C878; width:640px; padding:30px;
+                            border-radius:12px; color:white; margin:40px 0 0 45px;">
+                    <h3 style="padding-left:8px; border-left:6px solid #fff;
+                               font-size:22px; font-weight:bold; margin-bottom:18px;">
+                        Our Vision
+                    </h3>
+                    
+                    <p style="font-size:15px; line-height:1.5; margin-bottom:14px;">
+Circuit Makers transforms renewable energy education through innovative technology and community
+collaboration, empowering students and industry professionals with cutting-edge knowledge and practical skills.
+</p>
+<p style="font-size:15px; line-height:1.5; margin-bottom:14px;">
+Our platform bridges academic learning with industry application, creating a dynamic ecosystem where
+AI-driven personalization and gamified experiences build tomorrow's renewable energy leaders for India's green transformation.
+</p>
+<p style="font-size:15px; line-height:1.5;">
+Join us in democratizing renewable energy education and creating sustainable solutions for tomorrow's challenges.
+</p>
+                    
+                </div>
+            </div>
+
+            <!-- Right Side (Login Options + Tabs + Main Content) -->
+            <div style="padding:40px;">
+
+                {{{ output.course_content_header }}}
+                <div class="page-heading-menu" style="margin-bottom:20px;">
+                    {{{ output.page_heading_menu }}}
+                </div>
+
+                <h2 style="background:linear-gradient(to right,#1F4C8C,#00cc99);
+                           -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+                           font-size:28px; font-weight:bold; margin-top: -50px;">
+                    Choose Your Access
+                </h2>
+                <p style="color:#808080; font-size:14px; margin-bottom:30px;">
+                    Select your preferred way to explore SCIENTIA
+                </p>
+
+                <!-- Login Cards -->
+                <div style="display:flex; flex-direction:column; gap:20px;">
+                    
+                    <!-- Student -->
+                    <div class="login-card"
+                         onclick="window.location.href='https://lms2.circuitmakers.in/login/';"
+                         style="background:#F6FEF5; border:1px solid #50C878;
+                                border-radius:8px; padding:20px; max-width:480px;">
+                        <h3 style="color:#00a67c; font-size:18px; font-weight:bold; margin-bottom:10px;">
+                            👩‍🎓 Student Login
+                        </h3>
+                        <ul style="font-size:14px; color:#444; padding-left:18px; 
+                                   line-height:1.6; display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;">
+                            <li>Progress tracking & badges</li>
+                            <li>Community participation</li>
+                            <li>School leaderboards</li>
+                            <li>AI-powered learning assistant</li>
+                        </ul>
+                    </div>
+
+                    <!-- Industry -->
+                    <div class="login-card"
+                         onclick="window.location.href='https://lms2.circuitmakers.in/login/';"
+                         style="background: #F6FEF5; border:1px solid #2b4cbc;
+                                border-radius:12px; padding:20px; max-width:480px;">
+                        <h3 style="color:#2b4cbc; font-size:18px; font-weight:bold; margin-bottom:10px;">
+                            🏭 Industry Login
+                        </h3>
+                        <ul>
+                            <li>Talent discovery & recruitment</li>
+                            <li>Workshop facilitation</li>
+                            <li>CSR impact tracking</li>
+                            <li>Content collaboration</li>
+                        </ul>
+                    </div>
+
+                    <!-- College -->
+                    <div class="login-card"
+                         onclick="window.location.href='https://lms2.circuitmakers.in/login/';"
+                         style="background:#F0FFF8; border:1px solid #7a32c2;
+                                border-radius:12px; padding:20px; max-width:480px;">
+                        <h3 style="color:#7a32c2; font-size:18px; font-weight:bold; margin-bottom:10px;">
+                            🎓 College Login
+                        </h3>
+                        <ul>
+                            <li>Curriculum integration</li>
+                            <li>Faculty collaboration tools</li>
+                            <li>Student progress analytics</li>
+                            <li>Certification management</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Guest -->
+                <button>
+                    Continue as Guest →
+                </button>
+                <div style="margin-top:8px; font-size:12px; color:#888;">
+                    Explore the platform with limited features
+                </div>
+
+                <div class="main-content-block" style="margin-top:40px;">
+                    {{{ output.main_content }}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{> theme_boost/footer }}
+    {{{ output.standard_after_main_region_html }}}
+</body>

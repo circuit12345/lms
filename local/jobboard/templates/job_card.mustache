@@ -1,0 +1,143 @@
+{{! local_jobboard/jobs_grid.mustache }}
+
+<style>
+.job-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.job-card {
+    background: linear-gradient(145deg, #f0f8ff, #dcebff);
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 74, 173, 0.12);
+    padding: 1.8rem 2rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #1a202c;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.job-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 74, 173, 0.25);
+    transform: translateY(-6px);
+}
+
+.job-card__header {
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.chip {
+    display: inline-block;
+    font-size: 0.85rem;
+    padding: 0.25rem 0.8rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    color: white;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.chip--tag {
+    background: #4299e1;
+}
+
+.chip--open {
+    background: #38a169;
+}
+
+.chip--closed {
+    background: #e53e3e;
+}
+
+.job-card__title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+    color: #2c5282;
+}
+
+.job-card__meta {
+    font-size: 0.9rem;
+    color: #4a5568;
+    margin-bottom: 1rem;
+}
+
+.job-card__summary {
+    font-size: 1rem;
+    color: #2d3748;
+    margin-bottom: 1.8rem;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.job-card__footer {
+    display: flex;
+    gap: 1rem;
+}
+
+.job-card__footer a.btn {
+    font-weight: 600;
+    padding: 0.5rem 1.25rem;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.job-card__footer a.btn-primary {
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 10px rgba(102, 126, 234, 0.4);
+}
+
+.job-card__footer a.btn-primary:hover {
+    background: linear-gradient(90deg, #764ba2, #667eea);
+    box-shadow: 0 6px 20px rgba(118, 75, 162, 0.6);
+}
+
+.job-card__footer a.btn-outline-secondary {
+    border: 2px solid #667eea;
+    color: #667eea;
+    background: transparent;
+}
+
+.job-card__footer a.btn-outline-secondary:hover {
+    background: #667eea;
+    color: white;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+@media (max-width: 576px) {
+    .job-cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<div class="job-cards-grid">
+  {{#jobs}}
+    <div class="job-card" data-jobid="{{id}}">
+      <div class="job-card__header">
+        <span class="chip chip--{{status_class}}">{{status_label}}</span>
+        {{#tags}}<span class="chip chip--tag">{{.}}</span>{{/tags}}
+      </div>
+      <h3 class="job-card__title">{{title}}</h3>
+      <p class="job-card__meta">{{location}} · {{jobtype}} · {{posted_relative}}</p>
+      <p class="job-card__summary">{{{summary}}}</p>
+      <div class="job-card__footer">
+        <a class="btn btn-primary" href="{{view_url}}" role="button">{{#str}}view, local_jobboard{{/str}}</a>
+        {{#canapply}}<a class="btn btn-outline-secondary" href="{{view_url}}#apply" role="button">{{#str}}apply, local_jobboard{{/str}}</a>{{/canapply}}
+      </div>
+    </div>
+  {{/jobs}}
+</div>
